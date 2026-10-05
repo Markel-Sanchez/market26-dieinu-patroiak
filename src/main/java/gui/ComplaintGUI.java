@@ -37,10 +37,7 @@ public class ComplaintGUI extends JFrame {
 
 		JButton jButtonReceivedComp = new JButton(
 				ResourceBundle.getBundle("Etiquetas").getString("ComplaintGUI.ReceivedComplaints")); //$NON-NLS-1$ //$NON-NLS-2$
-		jButtonReceivedComp.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+
 		jButtonReceivedComp.setBounds(79, 178, 223, 69);
 		getContentPane().add(jButtonReceivedComp);
 

@@ -207,10 +207,8 @@ public class DataAccess {
         try {//Erroreak sahiesteko
             Registered u = db.find(Registered.class, email);
             Sale saleDB = db.find(Sale.class, s.getSaleNumber());
-            if (u != null && saleDB != null) {
-                if (!u.getFavorites().contains(saleDB)) {
-                    u.getFavorites().add(saleDB);
-                }
+            if (u != null && saleDB != null && !u.getFavorites().contains(saleDB)) {
+                u.getFavorites().add(saleDB);
             }
             db.getTransaction().commit();
         } catch (Exception e) {
@@ -283,7 +281,7 @@ public class DataAccess {
             Registered seller = s.getUser();
             
             
-            if (buyer != null && s != null && seller != null) {
+            if (buyer != null && seller != null) {
             	
             	float price = s.getPrice();
                 
