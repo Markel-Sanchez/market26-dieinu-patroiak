@@ -21,7 +21,8 @@ import java.awt.event.ActionEvent;
 
 public class OrdersGUI extends JFrame {
 	private String email;
-	private JButton jButtonClose = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Close"));
+	private final String ETIKETEN_IZENA="Etiquetas";
+	private JButton jButtonClose = new JButton(ResourceBundle.getBundle(ETIKETEN_IZENA).getString("Close"));
 	private JFrame thisFrame;
 
 	public OrdersGUI(String email) {
@@ -33,7 +34,7 @@ public class OrdersGUI extends JFrame {
 		this.getContentPane().setLayout(null);
 		jButtonClose.setBounds(new Rectangle(270, 354, 130, 30));
 
-		JButton jButtonQueryOrders = new JButton(ResourceBundle.getBundle("Etiquetas").getString("OrdersGUI.QueryOrders")); //$NON-NLS-1$ //$NON-NLS-2$
+		JButton jButtonQueryOrders = new JButton(ResourceBundle.getBundle(ETIKETEN_IZENA).getString("OrdersGUI.QueryOrders")); //$NON-NLS-1$ //$NON-NLS-2$
 		jButtonQueryOrders.setBounds(100, 177, 179, 49);
 		getContentPane().add(jButtonQueryOrders);
 		jButtonQueryOrders.addActionListener(new java.awt.event.ActionListener() {
@@ -43,7 +44,7 @@ public class OrdersGUI extends JFrame {
 			}
 		});
 
-		JButton jButtonMakeOrder = new JButton(ResourceBundle.getBundle("Etiquetas").getString("OrdersGUI.MakeOrder")); //$NON-NLS-1$ //$NON-NLS-2$
+		JButton jButtonMakeOrder = new JButton(ResourceBundle.getBundle(ETIKETEN_IZENA).getString("OrdersGUI.MakeOrder")); //$NON-NLS-1$ //$NON-NLS-2$
 		jButtonMakeOrder.setBounds(396, 177, 179, 49);
 		getContentPane().add(jButtonMakeOrder);
 		jButtonMakeOrder.addActionListener(new java.awt.event.ActionListener() {
