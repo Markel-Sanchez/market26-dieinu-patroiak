@@ -42,7 +42,7 @@ public class CartGUI extends JFrame {
 
 	public CartGUI(String email) {
 		this.sellerMail = email; 
-		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		tableProducts.setEnabled(false);
 		thisFrame=this;
 		this.getContentPane().setLayout(null);

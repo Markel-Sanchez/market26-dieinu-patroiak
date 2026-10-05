@@ -34,7 +34,7 @@ import exceptions.SaleAlreadyExistException;
 public class DataAccess {
     private EntityManager db;
     private EntityManagerFactory emf;
-    private static final int baseSize = 160;
+    private static final int BASE_SIZE = 160;
     private static final String basePath = "src/main/resources/images/";
     private boolean initializeDB = false;
     ConfigXML c = ConfigXML.getInstance();
@@ -425,7 +425,7 @@ public class DataAccess {
         	Registered buyer=db.find(Registered.class, email);
         	Sale sale=db.find(Sale.class,s.getSaleNumber());
         	Registered seller = sale.getUser();
-        	if(buyer!=null && sale!=null) {
+        	if(buyer!=null) {
         		Complaint comp= new Complaint(new Date(),deskripzioa, sale, buyer, seller);
         		db.persist(comp);
         		buyer.getSentComplaintList().add(comp);
@@ -458,11 +458,11 @@ public class DataAccess {
         try { //Erroreak sahiesteko
             TypedQuery<Complaint> query = db.createQuery("SELECT c FROM Complaint c WHERE c.egoera = true", Complaint.class);    
             adminComplaints = query.getResultList();
-            for (Complaint c : adminComplaints) {
-                if (c.getSale() != null) {
-                    c.getSale().getTitle(); 
-                    if (c.getSale().getUser() != null) {
-                        c.getSale().getUser().getEmail(); 
+            for (Complaint complaint : adminComplaints) {
+                if (complaint.getSale() != null) {
+                    complaint.getSale().getTitle(); 
+                    if (complaint.getSale().getUser() != null) {
+                        complaint.getSale().getUser().getEmail(); 
                     }
                 }
             }
@@ -826,9 +826,9 @@ public class DataAccess {
      * @return Tamaina aldatutako irudia.
      */
     public BufferedImage rescale(BufferedImage originalImage) {
-        BufferedImage resizedImage = new BufferedImage(baseSize, baseSize, BufferedImage.TYPE_INT_RGB);
+        BufferedImage resizedImage = new BufferedImage(BASE_SIZE, BASE_SIZE, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = resizedImage.createGraphics();
-        g.drawImage(originalImage, 0, 0, baseSize, baseSize, null);
+        g.drawImage(originalImage, 0, 0, BASE_SIZE, BASE_SIZE, null);
         g.dispose();
         return resizedImage;
     }

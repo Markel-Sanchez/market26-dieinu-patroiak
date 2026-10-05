@@ -15,8 +15,9 @@ import javax.swing.table.DefaultTableModel;
 public class PurchasedSalesGUI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
+	private static final String MAIN_GUI_PURCHASED = "MainGUIErregistratua_Purchased";
 	private final JLabel jLabelProducts = new JLabel(
-			ResourceBundle.getBundle("Etiquetas").getString("MainGUIErregistratua.Purchased"));
+			ResourceBundle.getBundle("Etiquetas").getString(MAIN_GUI_PURCHASED));
 	private JButton jButtonSearch = new JButton(
 			ResourceBundle.getBundle("Etiquetas").getString("QuerySalesGUI.Search"));
 	private JButton jButtonClose = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Close"));
@@ -40,7 +41,7 @@ public class PurchasedSalesGUI extends JFrame {
 		this.getContentPane().setLayout(null);
 
 		tableProducts.setEnabled(false);
-		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainGUIErregistratua.Purchased") + ": " + sellerMail);
+		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString(MAIN_GUI_PURCHASED) + ": " + sellerMail);
 
 		jLabelProducts.setBounds(52, 108, 427, 16);
 		this.getContentPane().add(jLabelProducts);
@@ -80,7 +81,7 @@ public class PurchasedSalesGUI extends JFrame {
 					if (purchasedSales == null || purchasedSales.isEmpty()) {
 						jLabelProducts.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUIErregistratua.NoPurchased"));
 					} else {
-						jLabelProducts.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUIErregistratua.Purchased"));
+						jLabelProducts.setText(ResourceBundle.getBundle("Etiquetas").getString(MAIN_GUI_PURCHASED));
 
 						for (domain.Sale sale : purchasedSales) {
 							if (jTextFieldSearch.getText().isEmpty() || sale.getTitle().toLowerCase()

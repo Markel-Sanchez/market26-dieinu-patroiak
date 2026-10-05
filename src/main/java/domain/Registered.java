@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlIDREF;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-public class Registered extends User {
+public class Registered extends User implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private float moneyKop;
