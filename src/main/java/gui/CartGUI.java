@@ -54,11 +54,7 @@ public class CartGUI extends JFrame {
 		this.getContentPane().add(jLabelProducts);
 
 		jButtonClose.setBounds(new Rectangle(200, 376, 130, 30));
-		jButtonClose.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				thisFrame.dispose(); 
-			}
-		});		
+		jButtonClose.addActionListener(e -> thisFrame.dispose());	
 		this.getContentPane().add(jButtonClose, null);
 		
 		
