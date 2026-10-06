@@ -31,6 +31,10 @@ import exceptions.FileNotUploadedException;
 import exceptions.MustBeLaterThanTodayException;
 import exceptions.SaleAlreadyExistException;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
 public class DataAccess {
     private EntityManager db;
     private EntityManagerFactory emf;
@@ -38,6 +42,9 @@ public class DataAccess {
     private static final String basePath = "src/main/resources/images/";
     private boolean initializeDB = false;
     ConfigXML c = ConfigXML.getInstance();
+    
+    Logger logger = Logger.getLogger(getClass().getName());
+
     
     /**
      * It implements the data access to the objectDb database
@@ -407,7 +414,7 @@ public class DataAccess {
                 u.getMovementList().add(m); //Ez da transakziorik irekitzen beste metodoetatik deitzen delako.
             }
         } catch (Exception e) {
-            System.err.println("Error in addMovement: " + e.getMessage());
+        	logger.log(Level.SEVERE, "Error in addMovement", e);
             throw e; 
         }
     }
