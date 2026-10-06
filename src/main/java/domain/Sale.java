@@ -57,8 +57,7 @@ public class Sale implements Serializable {
 				ImageIO.write(img1, "png", outputfile); // ignore returned boolean
 
 			} catch (IOException ex) {
-				// System.out.println("Write error for " + outputfile.getPath() ": " +
-				// ex.getMessage());
+				System.out.println(ex.getMessage());
 			}
 		}
 
