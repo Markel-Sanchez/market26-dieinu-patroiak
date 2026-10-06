@@ -14,7 +14,7 @@ public abstract class User {
 	private String name;
 	private String pass;
 
-	public User() {
+	protected User() {
 		super();
 	}
 
