@@ -152,7 +152,7 @@ public class DataAccess {
                 db.getTransaction().rollback();
                 return null;
             }
-            if (seller.getSales() != null) seller.getSales().size();
+            
 
             if (seller.doesSaleExist(title)) {
                 db.getTransaction().rollback();
