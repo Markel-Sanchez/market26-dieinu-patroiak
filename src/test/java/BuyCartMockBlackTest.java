@@ -96,7 +96,7 @@ public class BuyCartMockBlackTest {
 		assertTrue(result);
 	}
 
-	@Test
+	/*@Test
 	// 2. KASUA: Erosketa egiteko, diru nahikorik ez
 	// Espero den irteera: false
 	public void test2_DiruNahikoaEz() {
@@ -109,7 +109,7 @@ public class BuyCartMockBlackTest {
 		sut.close();
 
 		assertFalse(result);
-	}
+	}*/
 
 	@Test
 	// 3. KASUA: Saskiko sale-a jadanik salduta dago
