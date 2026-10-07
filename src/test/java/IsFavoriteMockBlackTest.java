@@ -70,7 +70,7 @@ public class IsFavoriteMockBlackTest {
             persistenceMock.close();
         }
     }
-/*
+
     @Test
     // Kutxa Beltza: Posta hutsa (null) - Baliokidetasun Klase Ez Egokia
     public void test1_PostaHutsa() {
@@ -136,5 +136,5 @@ public class IsFavoriteMockBlackTest {
 
         assertTrue(result);
     }
-    */
+    
 }
