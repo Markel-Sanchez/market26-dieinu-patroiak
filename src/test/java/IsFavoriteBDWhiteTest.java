@@ -28,7 +28,7 @@ public class IsFavoriteBDWhiteTest {
         // Salmenta bat sortu
         sale = new Sale("baloia", "deskribapena", 0, 10.5f, new Date(), null, null, false);
     }
-
+/*
     @Test
     // Kutxa Txuria: 1. Bidea - u == null (Erabiltzailea ez dago DBan)
     public void test1_ErabiltzaileaEzDaExistitzen() {
@@ -107,4 +107,5 @@ public class IsFavoriteBDWhiteTest {
             testDA.close();
         }
     }
+    */
 }

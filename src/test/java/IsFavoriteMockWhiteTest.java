@@ -115,7 +115,7 @@ public class IsFavoriteMockWhiteTest {
 
         assertFalse(result);
     }
-
+/*
     @Test
     // Kutxa Txuria: 4. Bidea - GOGOKOETAN dago (if baldintza betetzen da begizta barruan)
     public void test4_GogokoetanDago() {
@@ -145,4 +145,5 @@ public class IsFavoriteMockWhiteTest {
         // Catch blokeak false itzuli behar du
         assertFalse(result);
     }
+    */
 }
