@@ -30,7 +30,7 @@ public class IsFavoriteBDBlackTest {
         // Sale berria eraikitzaile eguneratuarekin
         validSale = new Sale("baloia", "deskribapena", 0, 10.5f, new Date(), null, null, false);
     }
-/*
+
     @Test
     // Kutxa Beltza: Posta hutsa da (null edo string hutsa) - Baliokidetasun Klase Ez Egokia
     public void test1_PostaHutsa() {
@@ -115,5 +115,5 @@ public class IsFavoriteBDBlackTest {
             testDA.close();
         }
     }
-    */
+    
 }
