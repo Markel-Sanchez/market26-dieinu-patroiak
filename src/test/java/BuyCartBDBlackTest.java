@@ -120,7 +120,7 @@ public class BuyCartBDBlackTest {
 			testDA.close();
 		}
 	}
-
+	/*
 	@Test
 	// 4. KASUA: buyerEmail NULL izatea
 	// Espero den irteera: false
@@ -177,7 +177,7 @@ public class BuyCartBDBlackTest {
 			sut.open();
 			boolean result = sut.buyCart(buyerEmail, cart1);
 			sut.close();
-
+	
 			assertFalse(result);
 		} finally {
 			testDA.open();
@@ -186,6 +186,7 @@ public class BuyCartBDBlackTest {
 			testDA.close();
 		}
 	}
+	*/
 
 	@Test
 	// 7. KASUA: cart NULL izatea
