@@ -280,4 +280,10 @@ public class BLFacadeImplementation implements BLFacade {
 	    dbManager.createReview(sale, sellerEmail, buyerEmail, stars, comment);
 	    dbManager.close();
 	}
+	/*
+	@WebMethod
+	public	ExtendedIterator<Sale>	getSalesIterator(String desc){
+		
+	}
+	*/
 }

@@ -47,7 +47,7 @@ public class BuyCartMockBlackTest {
 	private Sale validSale;
 	private List<Sale> cart1;
 	private List<Sale> cart2;
-
+	
 	@Before
 	public void init() {
 		MockitoAnnotations.openMocks(this);
