@@ -114,4 +114,7 @@ public interface BLFacade  {
 	@WebMethod public List<Review> getAllReviews(); 
 	
 	@WebMethod public void createReview(Sale sale, String sellerEmail, String buyerEmail, int stars, String comment);
+	
+	@WebMethod public	ExtendedIterator<Sale>	getSalesIterator(String desc);
+
 }
