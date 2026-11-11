@@ -21,7 +21,6 @@ public class ApplicationLauncher {
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
             
-            // Uso del patrón Factory Method para obtener el objeto de la lógica de negocio
             boolean isLocal = c.isBusinessLogicLocal();
             BLFactory factory = new BLFactory();
             BLFacade appFacadeInterface = factory.getBusinessLogicFactory(isLocal);
