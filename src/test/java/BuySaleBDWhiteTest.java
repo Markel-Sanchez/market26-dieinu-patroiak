@@ -19,7 +19,7 @@ public class BuySaleBDWhiteTest {
     private String buyerEmail;
     private String sellerEmail;
     private Sale validSale;
-
+//prueba
     @Before
     public void defaultValues() {
         buyerEmail = "jon@ehu.eus";
